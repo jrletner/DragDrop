@@ -10,6 +10,8 @@ export class AppComponent implements OnInit {
   items = ['Coach Will', 'David', 'Victoria', 'Jon', 'Sara', 'Eric', 'Joe'];
   title = 'DragDrop';
   ngOnInit(): void {}
+
+  //* FUNCTIONS
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.items, event.previousIndex, event.currentIndex);
   }
