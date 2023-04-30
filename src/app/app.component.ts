@@ -7,7 +7,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  items = ['Coach Will', 'David', 'Victoria', 'Jon', 'Sara', 'Eric', 'Joe'];
+  items = ['Coach Zack', 'Heath', 'Chris', 'Trevor', 'Sara', 'Joe'];
   title = 'DragDrop';
   ngOnInit(): void {}
 
