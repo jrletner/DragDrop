@@ -1,6 +1,20 @@
-<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-  <div class="example-box" *ngFor="let item of items" cdkDrag>
-    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
-    {{ item }}
+<div class="example-list" *ngFor="let week of weeks">
+  <div class="drag-container">
+    <div class="section-heading">
+      <b>Week {{ week.id }}</b>
+    </div>
+
+    <div
+      cdkDropList
+      id="{{ week.id }}"
+      [cdkDropListData]="week.weeklist"
+      [cdkDropListConnectedTo]="connectedTo"
+      class="item-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="item-box" *ngFor="let weekItem of week.weeklist" cdkDrag>
+        Week {{ week.id }} {{ weekItem }}
+      </div>
+    </div>
   </div>
 </div>
